@@ -102,7 +102,7 @@ function knckoutViewModel() {
     this.title = "Famous parks in Christchurch, NZ";
     this.searchLabel = "Search: ";
     this.footerText = "© Dai Kikuchi 2017";
-    this.githublink = "https://github.com/daikikuchi/NeighboringMap";
+    this.githublink = "https://github.com/daikikuchi/NeighboringMap.git";
 
     // Observables for info window
     this.infoTitle = ko.observable('');
