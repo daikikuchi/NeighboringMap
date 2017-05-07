@@ -9,7 +9,7 @@
 
 - Clicking a marker displays unique information about a location in either an infoWindow or DOM element.
 
-View live version here: 
+## View live version here: https://neighboringmap.appspot.com/
 
 ### Description: 
 
@@ -17,7 +17,7 @@ Map of parks in Christchurch NZ, with information retrieved via the Wikipedia ap
 
 ### Quickstart 
 
-- clone this repository: `git clone https://github.com/daikikuchi/NeighboringMap`
+- clone this repository: `git clone https://github.com/daikikuchi/NeighboringMap.git`
 - `cd NeighboringMap` 
 - open file `main.html` in you preferred browser
 
