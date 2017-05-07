@@ -1,0 +1,40 @@
+@media screen and (min-width: 640px) {
+    #top-page {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    #main-page {
+        width: 50%;
+        height: 100%;
+        float: right;
+        z-index: 0;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #top-page {
+        width: 65%;
+    }
+    #main-page {
+        width: 35%;
+    }
+    header,
+    #search {
+        height: 10%;
+    }
+    #map,
+    #locations,
+    #info-window {
+        height: 90%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #top-page {
+        width: 75%;
+    }
+    #main-page {
+        width: 25%;
+    }
+}
