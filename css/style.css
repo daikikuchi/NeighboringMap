@@ -44,6 +44,16 @@ footer {
     padding: 0.33em;
 }
 
+.info-header {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.info {
+    letter-spacing: 1px;
+}
+
 .main-window {
     background: #eaeded;
     color: black;
