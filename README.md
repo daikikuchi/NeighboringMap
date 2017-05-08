@@ -19,7 +19,7 @@ Map of parks in Christchurch NZ, with information retrieved via the Wikipedia ap
 
 - clone this repository: `git clone https://github.com/daikikuchi/NeighboringMap.git`
 - `cd NeighboringMap` 
-- open file `main.html` in you preferred browser
+- open file `index.html` in you preferred browser
 
 ### Technologies used 
 
