@@ -33,17 +33,17 @@ function initMap() {
     });
 
     // Start knockout
-    var knckout = new knckoutViewModel();
-    ko.applyBindings(knckout);
+    var knockout = new koViewModel();
+    ko.applyBindings(knockout);
 
     // get markers
-    var markers = knckout.locationList.map(function(location) {
+    var markers = knockout.locationList.map(function(location) {
         return location.marker;
     });
 }
 
 // Knockout View Model
-function knckoutViewModel() {
+function koViewModel() {
     // The old `self=this` trick
     var self = this;
 
@@ -105,6 +105,7 @@ function knckoutViewModel() {
     this.githublink = "https://github.com/daikikuchi/NeighboringMap.git";
 
     // Observables for info window
+    this.googleError = ko.observable('');
     this.infoTitle = ko.observable('');
     this.hasPhoto = ko.observable(false);
     this.locPhotoError = ko.observable('');
@@ -131,6 +132,7 @@ function knckoutViewModel() {
         this.address('');
         this.avgRating('');
         self.wikiError('');
+        self.googleError('');
         self.wikiText('Loading ...');
         self.wikiLink('Loading ...');
     };
@@ -153,7 +155,7 @@ function knckoutViewModel() {
         location.marker.setAnimation(google.maps.Animation.BOUNCE);
         setTimeout(function() {
             location.marker.setAnimation(null);
-        }, 3000);
+        }, 2800);
     };
 
     // Center map on current marker
@@ -273,7 +275,11 @@ function knckoutViewModel() {
         var location = self.getCurrentLocation();
         if (location.phoneNo === undefined) {
             self.getLocInfoData(location);
-        } else {
+        } 
+        else if (location.googleError !== undefined) {
+            self.googleError(location.googleError);
+        }
+        else {
             self.loadLocInfo(location);
         }
     }
@@ -298,6 +304,7 @@ function knckoutViewModel() {
             radius: '100',
             types: ['park', 'zoo']
         };
+        var genError = "There is nothing found from Google API"
         var service = new google.maps.places.PlacesService(map);
         service.nearbySearch(request, function(results, status) {
             if (status == "OK") {
@@ -330,6 +337,8 @@ function knckoutViewModel() {
                     location.locPhoto.hasPhoto = false;
                 }
 
+            } else {
+                location.googleError = genError;
             };
 
             self.loadLocInfo(location);
