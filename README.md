@@ -13,7 +13,7 @@
 
 ### Description: 
 
-Map of parks in Christchurch NZ, with information retrieved via the Wikipedia api, as well as information provided by Google Map API and Google Places API
+Map of parks in Christchurch NZ, with information retrieved via the Wikipedia API, as well as information provided by Google Map API and Google Places API
 
 ### Quickstart 
 
